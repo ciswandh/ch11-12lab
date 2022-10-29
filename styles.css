@@ -1,47 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=MonteCarlo&family=Montserrat:wght@300;400&family=Press+Start+2P&family=Sacramento&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 body {
   font-family: Montserrat, sans-serif;
   background-color: #eee;
   color: #111;
 }
-h1 {
+nav {
   text-align: center;
-  font-family: "Fredericka the Great", fantasy;
-  font-size: 36px;
-  color: #52207d;
-  letter-spacing: 1px;
+  margin-bottom: 75px;
+  font-size: 25px;
+  font-family: "MonteCarlo", cursive;
 }
-/*.intro {
-  font-family: Montserrat, sans-serif;
-}*/
-.apostrophe {
-  letter-spacing: 3px;
+
+li {
+  display: inline;
+  margin: 10px;
 }
-ul {
-  list-style-type: none;
-}
+
 a {
   text-decoration: none;
 }
-.nav {
-  font-family: "Press Start 2P", fantasy;
-  line-height: 1.5em;
+
+a {
+  text-decoration: none;
 }
+
 a:link {
-  color: rgb(213, 46, 177);
+  color: deeppink;
 }
 a:visited {
-  color: rgb(148, 57, 170);
+  color: rgb(129, 66, 99);
 }
 a:hover {
+  color: deeppink;
   text-decoration: underline;
+}
+a:active {
+  color: darkcyan;
+}
+h1 {
+  text-align: center;
+  font-family: "Fredericka the Great", fantasy;
+  font-size: 50px;
+  color: #52207d;
+  letter-spacing: 1px;
+  border-top: 8px solid rgb(133, 104, 145);
+  border-bottom: 12px solid rgb(133, 104, 145);
+  padding: 20px;
+  margin: 5% 20%;
+  border-radius: 10px;
+}
+.apostrophe {
+  letter-spacing: 3px;
+}
+img {
+  display: block;
+  margin: auto;
+  box-shadow: 5px 5px 5px 5px #777777;
+  height: 500px;
+  margin-bottom: 5%;
+  border-radius: 10px;
+}
+div {
+  padding: 20px;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  border-radius: 10px 60px;
+  margin-bottom: 20px;
+  background-color: rgb(230, 136, 158);
+}
+h3 {
+  font-size: 20px;
+}
+.notNav li {
+  display: block;
+
+  list-style-type: none;
 }
 form {
   border: 2px solid #ef6363;
   background-color: #ee8d8d;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 10%;
+  /* max-width: 400px; */
+  text-align: center;
 }
 input {
   background-color: rgb(152, 135, 220);
+  border-radius: 3px;
+  border: 2px solid rgb(114, 97, 181);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 input:hover {
   background-color: rgb(182, 169, 237);
@@ -52,31 +106,88 @@ input:focus {
 input:active {
   border: 2px solid #083182;
 }
-.bio {
-  color: #c3b8e8;
-  background-color: #6c7ac8;
-  text-shadow: 2px 2px 4px #000;
-  text-align: justify;
-}
-address {
-  font-family: MonteCarlo, cursive;
-  font-size: 24px;
-  border: 3px solid #97683b;
-  background-color: #e8cead;
-  color: #083182;
-  text-align: center;
-}
 button {
   background-color: #653094;
   font-family: "Press Start 2P", fantasy;
   font-size: 10px;
   color: #bbc3f3;
   border: 2px solid #653094;
+  border-radius: 3px;
+  padding: 5px;
 }
 button:hover {
   background-color: #8542bf;
   border: 2px solid #bd8aea;
 }
 button:active {
+  background-color: #9e6ec8;
+}
+.bio {
+  color: #c3b8e8;
   background-color: #6c7ac8;
+  text-shadow: 2px 2px 4px #000;
+  text-align: justify;
+  padding: 20px;
+  border-radius: 5px;
+  border-top-left-radius: 50px 40px;
+  margin: auto;
+  overflow: scroll;
+}
+address {
+  font-family: MonteCarlo, cursive;
+  font-size: 24px;
+  border: 3px solid #97683b;
+  border-radius: 5px;
+  background-color: #e8cead;
+  color: #083182;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  box-shadow: 5px 5px 5px 3px rgb(165, 161, 158);
+}
+
+/* ipad code here */
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    border-top-width: 7px;
+    border-bottom-width: 10px;
+  }
+  img {
+    height: 350px;
+  }
+  div {
+    height: 350px;
+    width: 350px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  address {
+    font-size: 20px;
+    width: 300px;
+  }
+}
+
+/* mobile code here */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+    border-top-width: 6px;
+    border-bottom-width: 8px;
+  }
+  img {
+    height: 250px;
+  }
+  div {
+    width: 275px;
+    height: 275px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  address {
+    font-size: 20px;
+    width: 250px;
+  }
 }
